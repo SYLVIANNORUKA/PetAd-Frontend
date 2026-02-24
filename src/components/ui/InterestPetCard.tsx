@@ -33,7 +33,7 @@ export function InterestPetCard({ pet, onToggleInterested }: PetCardProps) {
                     {/* Interested (+) Button */}
                     <button
                         onClick={() => onToggleInterested(pet.id)}
-                        className={`w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-colors active:scale-90 ${pet.isInterested ? "bg-[#0D1B2A] text-white" : "bg-white text-[#0D1B2A] hover:bg-gray-50"
+                        className={`w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-colors active:scale-90 ${pet.isInterested ? "bg-[#0D1B2A] text-white" : "bg-[#FF4726] text-white hover:bg-gray-50"
                             }`}
                         aria-label={pet.isInterested ? "Remove interest" : "Mark as interested"}
                     >
@@ -101,7 +101,7 @@ export function InterestPetCard({ pet, onToggleInterested }: PetCardProps) {
                     )}
 
                     {pet.consent === "granted" && !pet.adoption && (
-                        <button className="w-full bg-[#FF5A36] text-white py-[14px] rounded-xl font-semibold text-[14px] hover:bg-[#E84D2A] transition-colors flex items-center justify-center gap-2">
+                        <button className="w-full bg-[#FF4726] text-white py-[14px] rounded-xl font-semibold text-[14px] hover:bg-[#E84D2A] transition-colors flex items-center justify-center gap-2">
                             <span>Start Adoption Process</span>
                             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -109,7 +109,7 @@ export function InterestPetCard({ pet, onToggleInterested }: PetCardProps) {
                         </button>
                     )}
                     {pet.consent === "granted" && pet.adoption && (
-                        <button className="w-full bg-[#22C55E] text-white py-[14px] rounded-xl font-semibold text-[14px] hover:bg-[#16A34A] transition-colors">
+                        <button className="w-full bg-[#E8E6F5] text-[#0D1B2A] py-[14px] rounded-xl font-semibold text-[14px] hover:bg-[#16A34A] transition-colors">
                             Confirmed Pet Recieved
                         </button>
                     )}
