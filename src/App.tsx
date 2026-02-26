@@ -9,7 +9,7 @@ import ForgetPasswordPage from "./pages/forgetPasswordPage";
 import InterestPage from "./pages/interestPage";
 import NotificationPage from "./pages/notificationPage";
 import ResetPasswordPage from "./pages/resetPasswordPage";
-
+import PetListingDetailsPage from "./pages/PetlistingdetailsPage";
 
 function App() {
   return (
@@ -28,6 +28,7 @@ function App() {
         <Route path="/interests" element={<InterestPage />} />
         <Route path="/listings" element={<ListingsPage />} />
         <Route path="/notifications" element={<NotificationPage />} />
+        <Route path="/listings/:id" element={<PetListingDetailsPage />} />
       </Routes>
     </BrowserRouter>
   );
