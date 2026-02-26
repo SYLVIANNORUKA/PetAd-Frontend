@@ -1,14 +1,15 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import FavouritePage from "./pages/FavouritePage";
+import HomePage from "./pages/HomePage";
+import ListingsPage from "./pages/ListingsPage";
+import LoginPage from "./pages/LoginPage";
+import ProfilePage from "./pages/ProfilePage";
 import RegisterPage from "./pages/RegisterPage";
 import ForgetPasswordPage from "./pages/forgetPasswordPage";
-import ResetPasswordPage from "./pages/resetPasswordPage";
-import LoginPage from "./pages/LoginPage";
-import HomePage from "./pages/HomePage";
-import ProfilePage from "./pages/ProfilePage";
-import FavouritePage from "./pages/FavouritePage";
-import ListingsPage from "./pages/ListingsPage";
 import InterestPage from "./pages/interestPage";
 import NotificationPage from "./pages/notificationPage";
+import ResetPasswordPage from "./pages/resetPasswordPage";
+
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
         <Route path="/interests" element={<InterestPage />} />
         <Route path="/listings" element={<ListingsPage />} />
         <Route path="/notifications" element={<NotificationPage />} />
+
+        {/* Test Route */}
+
       </Routes>
     </BrowserRouter>
   );
